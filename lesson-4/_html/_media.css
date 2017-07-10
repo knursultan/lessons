@@ -20,6 +20,10 @@
 		font-size: 13px;
 		padding: 11px;
 	}
+
+	.wn_item .panel {
+		max-width: initial;
+	}
 }
 
 /* Small Devices, Tablets */
