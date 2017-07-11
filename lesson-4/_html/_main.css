@@ -283,6 +283,7 @@ h1.lead, h2.lead, h3.lead, h4.lead, h5.lead, h6.lead, .h1.lead, .h2.lead, .h3.le
 
 article {
 	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 article a {
@@ -337,4 +338,74 @@ article img {
 
 .wn_item:last-child .panel{
 	float: right;
+}
+
+.main_footer {
+	background-color: #242424;
+	padding: 30px 0 10px;
+	color: #fff;
+	font-size: 16px;
+	font-family: "RobotoRegular", sans-serif;
+}
+
+.logo_wrap {
+    overflow: hidden;
+    height: 65px;
+    margin-top: -15px;
+}
+
+.main_footer strong {
+	margin-top: 5px;
+	display: block;
+	line-height: 1.3;
+	position: relative;
+}
+
+.main_footer strong::before {
+	content: "";
+	width: 2px;
+	position: absolute;
+	height: 80%;
+	top: 5px;
+	left: -15px;
+	background-color: #fff;
+}
+
+.footer_phone {
+	font-size: 24px;
+	font-family: "RobotoBold", sans-serif;
+	font-weight: bold;
+	stroke-linejoin: .8;
+	margin-top: 2px;
+}
+
+.callbackk {
+	font-size: 12px;
+	font-weight: normal;
+	border-bottom: #fff 1px dotted;
+	color: #fff;
+}
+
+.callbackk:hover {
+	border-bottom: #f27937 1px dotted;
+	text-decoration: none;	
+}
+
+.devel	{
+	color: #4e4e4e;
+	font-size: 15px;
+	font-family: "RobotoBold", sans-serif;
+	display: inline-block;
+	margin-top: -10px;
+	width: 118px;
+}
+
+.devel small {
+	display: inline-block;
+	margin-bottom: 2px;
+}
+
+.devel:hover {
+	color: #4e4e4e;
+	text-decoration: none;
 }

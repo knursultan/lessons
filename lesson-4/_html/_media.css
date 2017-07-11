@@ -24,6 +24,11 @@
 	.wn_item .panel {
 		max-width: initial;
 	}
+
+	.main_footer .col-sm-6 {
+		margin-bottom: 20px;
+		text-align: center;
+	}
 }
 
 /* Small Devices, Tablets */
