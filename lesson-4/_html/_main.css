@@ -409,3 +409,12 @@ article img {
 	color: #4e4e4e;
 	text-decoration: none;
 }
+
+.isnohome .navbar {
+	overflow: hidden;
+}
+
+.isnohome .navbar-brand img {
+	width: 80px;
+	margin-right: 15px;
+}
