@@ -30,6 +30,19 @@ section
 		font-size: 24px
 		text-transform: uppercase
 		margin: 0 0 15px
+	.personal_header
+		font-size: 13px
+		text-align: left
+		margin-bottom: 30px
+		color: #555
+
+	h3
+		text-align: center
+		text-transform: uppercase
+		font-weight: 400
+		font-size: 12px
+		margin-top: 0
+		margin-bottom: 35px
 
 .s_descr_wrap
 	text-align: center
@@ -177,6 +190,15 @@ $h: 3px
 	ul
 		margin-top: 180px
 		text-align: center
+		li
+			&:nth-child(1) a
+				+animation-duration(.5s)
+			&:nth-child(2) a
+				+animation-duration(1s)
+			&:nth-child(3) a
+				+animation-duration(1.5s)
+			&:nth-child(4) a
+				+animation-duration(2s)		
 		a
 			color: #fff
 			display: block
@@ -215,6 +237,7 @@ $h: 3px
 		p
 			margin: 0
 			text-transform: uppercase
+			+animation-delay(1.5s)
 		h1
 			display: inline-block
 			padding: 10px 35px
@@ -225,8 +248,9 @@ $h: 3px
 			font-size: 2.8em
 			margin-left: 20px
 			margin-right: 20px
-			padding-left: 10px;
+			padding-left: 10px
 			padding-right: 10px
+			+animation-delay(1s)
 
 .top_centered
 	background-color: rgba(0, 0, 0, .5);
@@ -238,3 +262,28 @@ $h: 3px
 	padding: 50px 0
 	font-size: 13px
 	font-weight: 300
+
+.person
+	text-align: center
+	img
+		max-width: 220px
+		display: inline-block
+		border-radius: 50%
+
+.s_about
+	p
+		margin-bottom: 30px
+	ul,
+	li
+		margin: 0
+		padding: 0
+		list-style-type: none
+		margin-bottom: 10px
+	.social_wrap
+		margin-top: 25px
+
+.social_wrap
+	li
+		display: inline-block
+		font-size: 20px
+		padding: 0 3px

@@ -29,6 +29,18 @@ section {
     font-size: 24px;
     text-transform: uppercase;
     margin: 0 0 15px; }
+  section .personal_header {
+    font-size: 13px;
+    text-align: left;
+    margin-bottom: 30px;
+    color: #555; }
+  section h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 35px; }
 
 .s_descr_wrap {
   text-align: center; }
@@ -191,6 +203,22 @@ svg {
   .top_menu ul {
     margin-top: 180px;
     text-align: center; }
+    .top_menu ul li:nth-child(1) a {
+      -webkit-animation-duration: 0.5s;
+      -moz-animation-duration: 0.5s;
+      animation-duration: 0.5s; }
+    .top_menu ul li:nth-child(2) a {
+      -webkit-animation-duration: 1s;
+      -moz-animation-duration: 1s;
+      animation-duration: 1s; }
+    .top_menu ul li:nth-child(3) a {
+      -webkit-animation-duration: 1.5s;
+      -moz-animation-duration: 1.5s;
+      animation-duration: 1.5s; }
+    .top_menu ul li:nth-child(4) a {
+      -webkit-animation-duration: 2s;
+      -moz-animation-duration: 2s;
+      animation-duration: 2s; }
     .top_menu ul a {
       color: #fff;
       display: block;
@@ -231,7 +259,10 @@ svg {
     display: inline-block; }
     .top_wrapper .top_text p {
       margin: 0;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      -webkit-animation-delay: 1.5s;
+      -moz-animation-delay: 1.5s;
+      animation-delay: 1.5s; }
     .top_wrapper .top_text h1 {
       display: inline-block;
       padding: 10px 35px;
@@ -243,7 +274,10 @@ svg {
       margin-left: 20px;
       margin-right: 20px;
       padding-left: 10px;
-      padding-right: 10px; }
+      padding-right: 10px;
+      -webkit-animation-delay: 1s;
+      -moz-animation-delay: 1s;
+      animation-delay: 1s; }
 
 .top_centered {
   background-color: rgba(0, 0, 0, 0.5); }
@@ -255,3 +289,28 @@ svg {
   padding: 50px 0;
   font-size: 13px;
   font-weight: 300; }
+
+.person {
+  text-align: center; }
+  .person img {
+    max-width: 220px;
+    display: inline-block;
+    border-radius: 50%; }
+
+.s_about p {
+  margin-bottom: 30px; }
+
+.s_about ul,
+.s_about li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 10px; }
+
+.s_about .social_wrap {
+  margin-top: 25px; }
+
+.social_wrap li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 0 3px; }
