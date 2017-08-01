@@ -1,5 +1,15 @@
 $(document).ready(function() {
-	$(".popup").magnificPopup({type:'image'});
+
+    $("#portfolio_grid").mixItUp();
+
+    $(".s_portfolio li").click(function(){
+        $(".s_portfolio li").removeClass("active");
+        $(this).addClass("active");
+    });
+
+
+    $(".popup").magnificPopup({type:'image'});
+    $(".popup_content").magnificPopup({type:'inline'});
 
 	$(".top_text h1").animated("fadeInDown", "fadeOutUp");
 	$(".top_text p, .section_header").animated("fadeInUp", "fadeOutDown");
