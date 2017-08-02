@@ -49,6 +49,8 @@ $(document).ready(function() {
     	$(".top_menu").fadeOut(600);
         $(".sandwich").toggleClass("active");
     }).append("<span>");
+
+    $(".top_menu ul a").mPageScroll2id();
 });
 
 $(window).load(function() {
