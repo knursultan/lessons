@@ -68,12 +68,7 @@ b, strong {
 .top_line {
   padding-top: 20px;
   min-height: 91px;
-  background-color: #243343;
-  background-repeat: repeat-x;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2; }
+  background-repeat: repeat-x; }
 
 .logo img {
   width: 100px; }
@@ -107,7 +102,7 @@ b, strong {
     text-align: right;
     white-space: nowrap; }
   .phone_wrap .toggle_menu {
-    display: block;
+    display: none;
     float: right;
     position: absolute;
     right: 0;
@@ -166,13 +161,13 @@ b, strong {
   visibility: visible; }
 
 .header_wrap {
-  margin-top: 90px; }
+  margin-top: 65px; }
   .header_wrap h1 {
-    margin-top: 120px;
     color: #fff;
     display: inline-block;
     border-bottom: #F39F18 8px solid;
-    padding-bottom: 22px; }
+    padding-bottom: 22px;
+    font-size: 2.5em; }
   .header_wrap ul {
     margin-top: 10px; }
     .header_wrap ul li {
@@ -193,13 +188,10 @@ b, strong {
         position: absolute;
         top: 10px;
         left: 0; }
-      .header_wrap ul li a {
-        text-decoration: none;
+      .header_wrap ul li p {
         color: #fff;
         font-size: 1.125em;
-        line-height: 2em; }
-        .header_wrap ul li a:hover {
-          text-decoration: underline; }
+        line-height: 1.25em; }
 
 .header_left {
   margin-bottom: 40px; }
@@ -208,8 +200,7 @@ b, strong {
   background-color: rgba(36, 51, 67, 0.8);
   padding: 30px 35px 30px;
   color: #97a4b2;
-  font-size: 0.875em;
-  margin-top: 50px; }
+  font-size: 0.875em; }
   .forms h4 {
     color: #fff;
     font-family: "PFCentroSlabProMedium", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;

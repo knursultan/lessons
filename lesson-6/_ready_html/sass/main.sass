@@ -1,4 +1,7 @@
 @import "bourbon"
+@import "../app/libs/owl/assets/owl.carousel.sass"
+$main_color: #F39F18
+$header_color: #2c3949
 
 *::-webkit-input-placeholder
 	color: #fff
@@ -23,8 +26,133 @@ body input:required:valid,
 body textarea:required:valid
 	color: #fff
 
-//Custom Styles Here
 
+.homesect
+	padding-top: 70px
+	background-color: #f9f9f9
+	position: relative
+	&::before
+		content: ''
+		height: 6px
+		position: absolute
+		top: -6px
+		width: 100%
+		background-image: url("img/bah_1.png")
+		background-repeat: repeat-x
+	h2
+		text-align: center
+		position: relative
+		&::after
+			position: absolute
+			content: ''
+			height: 4px
+			background-color: $main_color
+			width: 165px
+			display: block
+			bottom: -34px
+			left: 50%
+			transform: translate(-50%, 0) // выравнение по центру
+	h4
+		text-align: center
+		margin-bottom: 70px
+		
+
+.section_content
+	margin-top: 70px
+	position: relative
+	img
+		width: 100%
+	h3, h5
+		text-align: center
+	&::before
+		content: ''
+		width: 100%
+		height: 240px
+		background-color: #465464
+		opacity: .5
+		position: absolute
+		left: 0
+		top: 0
+
+
+.s_grey
+	padding-top: 70px
+	position: relative
+	h2
+		text-align: center
+		position: relative
+		&::after
+			position: absolute
+			content: ''
+			height: 4px
+			background-color: $main_color
+			width: 165px
+			display: block
+			bottom: -34px
+			left: 50%
+			transform: translate(-50%, 0) // выравнение по центру
+	h4
+		text-align: center
+	background-color: #E5E5E5
+	position: relative
+	&::before
+		content: ''
+		height: 6px
+		position: absolute
+		top: -6px
+		width: 100%
+		background-image: url("img/bah_3.png")
+		background-repeat: repeat-x
+
+.slider
+	margin-top: 80px
+	padding-bottom: 70px
+
+	.slide
+		text-align: center
+		position: relative
+		.img_wrap
+			margin: 10px
+			display: inline-block
+			border-radius: 10em
+			overflow: hidden
+			box-shadow: 0 0 0 6px $main_color
+			img
+				width: 140px
+				height: 140px
+		.slide_description
+			p
+				font-size: em(15px)
+				color: #6E7B8B
+	.owl-controls
+		text-align: center
+		.owl-dot
+			width: 15px
+			height: 15px
+			margin: 0 3px
+			background-color: #CCC
+			display: inline-block
+			border-radius: 10em
+			&.active
+				background-color: $main_color
+		.owl-nav
+			position: absolute
+			top: 12%
+			width: 100%
+			> div
+				height: 29px
+				width: 16px
+				background-image: url("img/slider_arrows.png")
+				position: absolute
+				left: 20px
+				opacity: .5
+				transition: all .25s ease
+				&:hover
+					opacity: 1
+			.owl-next
+				right: 20px
+				left: auto
+				background-position: -16px 0
 
 //ALWAYS END
 @import "_media.sass"

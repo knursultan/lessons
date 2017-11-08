@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	$(".toggle_menu").click(function(){
 		$(this).toggleClass("on");
-		$(".main_menu").slideToggle();
+		$(".main_menu").slideToggle(); 
 	});
 
 	//Цели для Яндекс.Метрики и Google Analytics
@@ -47,5 +47,12 @@ $(document).ready(function() {
 	};
 
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+
+	$(".slider").owlCarousel({
+		items : 1,
+		nav: true,
+		navText: '',
+		loop: true
+	});
 
 });

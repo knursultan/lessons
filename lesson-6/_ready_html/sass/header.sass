@@ -74,14 +74,14 @@ b, strong
 .top_line
 	padding-top: 20px
 	min-height: 91px
-	background-color: rgba(36, 51, 67, 1.8)
+	// background-color: rgba(36, 51, 67, 1.8)
     // background-color: rgba(36, 51, 67, 1.8);
 	// background-image: url("img/top_gradient.png")
 	background-repeat: repeat-x
-	position: fixed
-	top: 0
-	width: 100%
-	z-index: 2
+	// position: fixed
+	// top: 0
+	// width: 100%
+	// z-index: 2
 
 .logo
 	img
@@ -118,7 +118,8 @@ b, strong
 		text-align: right
 		white-space: nowrap //Не переносится
 	.toggle_menu
-		display: block
+		display: none
+		// display: block
 		float: right
 		position: absolute
 		right: 0
@@ -173,13 +174,14 @@ b, strong
 	visibility: visible
 
 .header_wrap
-	margin-top: 90px
+	margin-top: 65px
 	h1
-		margin-top: 120px
+		// margin-top: 120px
 		color: #fff
 		display: inline-block
 		border-bottom: $main_color 8px solid
 		padding-bottom: 22px
+		font-size: em(40)
 	ul
 		@extend .ulmenu
 		margin-top: 10px
@@ -197,13 +199,17 @@ b, strong
 				position: absolute
 				top: 10px
 				left: 0
-			a
-				text-decoration: none
+			p
 				color: #fff
 				font-size: em(18px)
-				line-height: em(32px)
-				&:hover
-					text-decoration: underline
+				line-height: em(20px)
+			// a
+			// 	text-decoration: none
+			// 	color: #fff
+			// 	font-size: em(18px)
+			// 	line-height: em(32px)
+			// 	&:hover
+			// 		text-decoration: underline
 
 .header_left
 	margin-bottom: 40px
@@ -213,7 +219,7 @@ b, strong
 	padding: 30px 35px 30px
 	color: #97a4b2
 	font-size: em(14px)
-	margin-top: 50px
+	// margin-top: 100px
 	h4
 		color: #fff
 		font-family: "PFCentroSlabProMedium", $helvetica
