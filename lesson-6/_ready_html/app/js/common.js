@@ -55,4 +55,9 @@ $(document).ready(function() {
 		loop: true
 	});
 
+	$(".tab_item").not(":first").hide();
+	$(".row .tab").click(function() {
+		$(".row .tab").removeClass("active").eq($(this).index()).addClass("active");
+		$(".tabs_wrapper .tab_item").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
 });

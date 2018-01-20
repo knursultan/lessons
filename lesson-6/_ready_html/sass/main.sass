@@ -64,16 +64,6 @@ body textarea:required:valid
 		width: 100%
 	h3, h5
 		text-align: center
-	&::before
-		content: ''
-		width: 100%
-		height: 240px
-		background-color: #465464
-		opacity: .5
-		position: absolute
-		left: 0
-		top: 0
-
 
 .s_grey
 	padding-top: 70px
@@ -107,7 +97,6 @@ body textarea:required:valid
 .slider
 	margin-top: 80px
 	padding-bottom: 70px
-
 	.slide
 		text-align: center
 		position: relative
@@ -154,5 +143,133 @@ body textarea:required:valid
 				left: auto
 				background-position: -16px 0
 
+.button
+	border: none
+	cursor: pointer
+	display: inline-block
+	height: 46px
+	line-height: 46px
+	padding: 0 32px
+	background-color: #000
+	text-transform: uppercase
+	text-align: center
+	color: #fff
+	border-radius: 3px
+	text-decoration: none
+	font-size: 16px
+	font-family: "RobotoBold", sans-serif
+	&.btn_orage
+		background-color: $main_color
+		color: #111
+
+.tabs
+	.tab
+		font-family: "PFCentroSlabProMedium", $helvetica
+		text-transform: uppercase
+		font-size: em(20px)
+.s_map
+	padding-top: 70px
+	padding-bottom: 70px
+	background-color: #f9f9f9
+	position: relative
+	font-size: em(15px)
+	&::before
+		content: ''
+		height: 6px
+		position: absolute
+		top: -6px
+		width: 100%
+		background-image: url("img/bah_1.png")
+		background-repeat: repeat-x
+	h2
+		text-align: center
+		position: relative
+		margin-bottom: 70px
+		&::after
+			position: absolute
+			content: ''
+			height: 4px
+			background-color: $main_color
+			width: 165px
+			display: block
+			bottom: -34px
+			left: 50%
+			transform: translate(-50%, 0) // выравнение по центру
+	h4
+		text-align: center
+		margin-bottom: 70px
+	.tabs
+		text-align: center
+		line-height: 45px
+		.tab
+            padding: 10px 60px
+            border: $main_color 5px solid
+            line-height: 38px
+            color: $main_color
+            margin: 0 -4px
+            &:first-child
+            	border-radius: 3px 0 0 3px
+            &:last-child
+            	border-radius: 0 3px 3px 0
+            &.active
+            	background-color: $main_color
+            	color: #111
+	.tabs_wrapper
+		.tab_item
+			margin-top: 40px
+			text-align: center
+			p
+				font-size: em(20px)
+				font-family: "PFCentroSlabProMedium", $helvetica
+				img
+					margin-right: 5px
+					margin-bottom: 5px
+
+.main_footer
+	padding-top: 70px
+	position: relative
+	background-color: #E5E5E5
+	position: relative
+	h2
+		text-align: center
+		position: relative
+	&::before
+		content: ''
+		height: 6px
+		position: absolute
+		top: -6px
+		width: 100%
+		background-image: url("img/bah_3.png")
+		background-repeat: repeat-x
+	p
+		text-align: center
+		margin-top: 30px
+		font-size: em(20px)
+		font-family: "PFCentroSlabProMedium", $helvetica
+	.connect_info
+		text-align: center
+		font-size: em(16px)
+		font-family: "PFCentroSlabProMedium", $helvetica
+		padding-bottom: 50px
+		span
+			color: #6E7B8B
+	.phone
+		span
+			img
+				margin-right: 5px
+				margin-bottom: 5px
+	.email
+		span
+			img
+				margin-right: 5px
+				margin-bottom: 5px
+	.instagram
+		span
+			img
+				margin-right: 5px
+				margin-bottom: 5px
+
+
+		
 //ALWAYS END
 @import "_media.sass"
