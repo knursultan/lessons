@@ -11,3 +11,15 @@
         clear: both;
     }
 }
+
+@mixin mq($width: 50em) {
+    @media (min-width: $width) {
+        @content;
+    }
+}
+
+@mixin mqfz {
+    @media (max-width: 414px) {
+        font-size: 2em;
+    }
+}

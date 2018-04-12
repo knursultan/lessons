@@ -343,7 +343,11 @@ body {
   font-family: "Merriweather", serif;
   line-height: 1.6;
   background: #FFFFFF;
-  font-size: .875rem; }
+  font-size: .875rem;
+  overflow-x: hidden; }
+  @media (min-width: 50em) {
+    body {
+      font-size: 1.125rem; } }
 
 img {
   max-width: 100%; }
@@ -356,15 +360,99 @@ h1 {
   color: #03AFC2;
   line-height: 1;
   font-size: 3.125rem; }
+  @media (min-width: 50em) {
+    h1 {
+      font-size: 4.25rem; } }
 
 h2 {
-  font-family: 2rem;
+  font-size: 2rem;
   letter-spacing: 0.15em;
   color: #606060;
   text-transform: uppercase;
   line-height: 1;
   font-family: "Six Caps", sans-serif;
   font-weight: 400; }
+  @media (min-width: 50em) {
+    h2 {
+      font-size: 3.5rem; } }
+
+.menu-button {
+  position: absolute;
+  top: 3em;
+  left: 3em;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer; }
+
+nav {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 15%;
+  z-index: 10;
+  transform: translateX(-100%);
+  -webkit-transition: transform ease-in-out 250ms;
+  -moz-transition: transform ease-in-out 250ms;
+  -ms-transition: transform ease-in-out 250ms;
+  -o-transition: transform ease-in-out 250ms;
+  transition: transform ease-in-out 250ms; }
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: stretch;
+  background-color: #03AFC2; }
+
+nav li {
+  text-align: center; }
+  nav li:not(:last-of-type) {
+    border-bottom: 1px solid #223843; }
+
+nav li:hover {
+  background-color: rgba(34, 56, 67, 0.5); }
+
+nav a {
+  display: inline-block;
+  font-size: 4rem;
+  letter-spacing: 0.15em;
+  color: #223843;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: "Six Caps", sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  padding: calc(100vh/8) 3em;
+  line-height: 0; }
+  @media (max-width: 414px) {
+    nav a {
+      font-size: 2em; } }
+
+.close-icon {
+  display: none; }
+
+.nav-is-open {
+  height: 100vh;
+  overflow-y: hidden; }
+  .nav-is-open nav {
+    transform: translateX(0); }
+  .nav-is-open .container-all {
+    transform: translateX(85%); }
+  .nav-is-open .close-icon {
+    display: block; }
+  .nav-is-open .hamburger {
+    display: none; }
+  .nav-is-open .menu-button {
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
 
 .welcome {
   background-image: url(../img/header-bg.png);
@@ -374,15 +462,19 @@ h2 {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
   .welcome h1 {
     font-size: 1.5rem;
     font-weight: 400;
     color: #223843;
     line-height: 2;
     text-align: center; }
+    @media (min-width: 50em) {
+      .welcome h1 {
+        font-size: 2.5vw; } }
     .welcome h1 span {
-      font-family: 5.5rem;
+      font-size: 5.5rem;
       letter-spacing: 0.15em;
       color: #03AFC2;
       text-transform: uppercase;
@@ -390,10 +482,13 @@ h2 {
       font-family: "Six Caps", sans-serif;
       font-weight: 400;
       display: block; }
+      @media (min-width: 50em) {
+        .welcome h1 span {
+          font-size: 7vw; } }
     .welcome h1::before, .welcome h1::after {
       content: '';
       display: block;
-      width: 80%;
+      width: 60%;
       height: 1px;
       background-color: #223843; }
     .welcome h1::before {
@@ -458,10 +553,16 @@ h2 {
 
 @supports (display: grid) {
   .about-me {
-    grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end]; }
+    display: grid;
+    grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+    grid-column-gap: 1em; }
   .about-img {
     grid-column: port-start / img-end;
     grid-row: 1 / 2; }
+    @media (min-width: 50em) {
+      .about-img {
+        grid-row: 1 / 4;
+        margin-right: 1em; } }
   .about-title {
     grid-column: name/port;
     grid-row: 1 / 2;
@@ -470,6 +571,14 @@ h2 {
   .about-subtitle,
   .about-text {
     grid-column: port / port; }
+    @media (min-width: 50em) {
+      .about-subtitle,
+      .about-text {
+        grid-column: image-end / port-end; } }
+  .about-subtitle {
+    grid-row: 2 / 3; }
+  .about-text {
+    grid-row: 3 / 4; }
   .about-subtitle {
     margin: 0.5em 0; } }
 
@@ -539,6 +648,9 @@ h2 {
   .portfolio-items {
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 50em) {
+      .portfolio-items {
+        grid-template-columns: repeat(4, 1fr); } }
   .portfolio-item.featured {
     grid-column: 1 / span 2;
     grid-row: 1 / span 2; }
@@ -555,16 +667,6 @@ h2 {
   .contact h1 {
     text-align: center; }
 
-input,
-textarea {
-  display: block;
-  padding: 1.25em;
-  width: 100%;
-  background-color: #b9b9b9;
-  border: 1px solid #A7A7A7;
-  font-size: 1.2rem;
-  box-sizing: border-box; }
-
 label {
   display: block;
   margin-top: 1em;
@@ -573,15 +675,44 @@ label {
 form {
   display: flex;
   flex-direction: column; }
+  @supports (display: grid) {
+    @media (min-width: 50em) {
+      form {
+        display: grid;
+        grid-column: 1fr 1fr;
+        grid-gap: 1em;
+        grid-template-areas: "name     email" "message  message" ".        button"; }
+        form .name {
+          grid-area: name; }
+        form .email {
+          grid-area: email; }
+        form .message {
+          grid-area: message; }
+          form .message textarea {
+            height: 10em; }
+        form .button {
+          grid-area: button; } } }
+
+input,
+textarea {
+  display: block;
+  padding: 1.25em;
+  width: 100%;
+  min-width: 15em;
+  background-color: #b9b9b9;
+  border: 1px solid #A7A7A7;
+  font-size: 1.2rem;
+  box-sizing: border-box; }
 
 .button {
   display: inline-block;
   width: auto;
+  min-width: auto;
   margin-top: 1em;
   margin-left: auto;
   background-color: #03AFC2;
   border: none;
-  font-family: 2.5rem;
+  font-size: 2.5rem;
   letter-spacing: 0.15em;
   color: #FFFFFF;
   text-transform: uppercase;

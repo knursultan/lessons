@@ -7,6 +7,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 
     h1 {
         font-size: 1.5rem;
@@ -14,16 +15,25 @@
         color: $dark-blue;
         line-height: 2;
         text-align: center;
+
+        @include mq {
+            font-size: 2.5vw;
+        }
+
         span {
             @include sans-serif($fs: 5.5rem, $color: $accent);
             display: block;
+
+            @include mq {
+                font-size: 7vw;
+            }
         }
 
         &::before,
         &::after {
             content: '';
             display: block;
-            width: 80%;
+            width: 60%;
             height: 1px;
             background-color: $dark-blue;
         }
