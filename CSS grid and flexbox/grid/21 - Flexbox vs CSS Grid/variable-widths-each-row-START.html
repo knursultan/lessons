@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../assets/style.css">
-  <title>Flexbox vs CSS Grid: Variable Widths on Each Row!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>Flexbox vs CSS Grid: Variable Widths on Each Row!</title>
 </head>
 
 <body>
-  <div class="flex-container">
+<div class="flex-container">
     <div class="item">Short</div>
     <div class="item">Longerrrrrrrrrrrrrr</div>
     <div class="item">💩</div>
@@ -19,14 +19,19 @@
     <div class="item">Snickers</div>
     <div class="item">Wes Is Cool</div>
     <div class="item">Short</div>
-  </div>
-  <style>
-    .flex-container {}
-
-    .flex-container>* {
-      margin: 10px;
+</div>
+<style>
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid black;
     }
-  </style>
+
+    .flex-container > * {
+        margin: 10px;
+        flex: 1;
+    }
+</style>
 </body>
 
 </html>
