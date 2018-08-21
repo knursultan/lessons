@@ -1,30 +1,33 @@
-// let scores = [3, 4, [5, 6]];
+let user = {
+    firstName: 'John',
+    lastName: 'Doe',
+    social: {
+        facebook: 'johndoe',
+        twitter: 'jdoe'
+    }
+};
 
-// let [low, mid, [high, higher]] = scores;
+let {firstName: first, lastName: last, social: {facebook}, age = 25} = user;
 
-// console.log(low, mid, high, higher);
+console.log(first, last, facebook, age);
 
-function computeScore([low, mid]) {
-    console.log(low, mid);
+function post(url, {data: {firstName, lastName}, cache}) {
+    console.log(firstName, lastName, cache);
 }
 
-computeScore([3, 4]);
+let result = post('api/users', {data: user, cache: false});
 
-function getScores() {
-    return [3, 4, 5];
+function getUserInfo() {
+    return {
+        firstName: 'John',
+        lastName: 'Doe',
+        social: {
+            facebook: 'johndoe',
+            twitter: 'jdoe'
+        }
+    };
 }
 
-let scores = getScores();
+let { firstName, lastName, social: {twitter} } = getUserInfo();
 
-console.log(scores);
-
-let [low, mid, high] = getScores();
-console.log(low, mid, high);
-
-let yes = 'Yes';
-let no = 'No';
-
-[yes, no] = [no, yes];
-
-console.log('Yes is', yes);
-console.log('No is', no);
+console.log(firstName, lastName, twitter )

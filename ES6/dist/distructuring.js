@@ -1,46 +1,48 @@
 'use strict';
 
-var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
+var user = {
+    firstName: 'John',
+    lastName: 'Doe',
+    social: {
+        facebook: 'johndoe',
+        twitter: 'jdoe'
+    }
+};
 
-// let scores = [3, 4, [5, 6]];
+var first = user.firstName,
+    last = user.lastName,
+    facebook = user.social.facebook,
+    _user$age = user.age,
+    age = _user$age === undefined ? 25 : _user$age;
 
-// let [low, mid, [high, higher]] = scores;
 
-// console.log(low, mid, high, higher);
+console.log(first, last, facebook, age);
 
-function computeScore(_ref) {
-    var _ref2 = _slicedToArray(_ref, 2),
-        low = _ref2[0],
-        mid = _ref2[1];
+function post(url, _ref) {
+    var _ref$data = _ref.data,
+        firstName = _ref$data.firstName,
+        lastName = _ref$data.lastName,
+        cache = _ref.cache;
 
-    console.log(low, mid);
+    console.log(firstName, lastName, cache);
 }
 
-computeScore([3, 4]);
+var result = post('api/users', { data: user, cache: false });
 
-function getScores() {
-    return [3, 4, 5];
+function getUserInfo() {
+    return {
+        firstName: 'John',
+        lastName: 'Doe',
+        social: {
+            facebook: 'johndoe',
+            twitter: 'jdoe'
+        }
+    };
 }
 
-var scores = getScores();
+var _getUserInfo = getUserInfo(),
+    firstName = _getUserInfo.firstName,
+    lastName = _getUserInfo.lastName,
+    twitter = _getUserInfo.social.twitter;
 
-console.log(scores);
-
-var _getScores = getScores(),
-    _getScores2 = _slicedToArray(_getScores, 3),
-    low = _getScores2[0],
-    mid = _getScores2[1],
-    high = _getScores2[2];
-
-console.log(low, mid, high);
-
-var yes = 'Yes';
-var no = 'No';
-
-var _ref3 = [no, yes];
-yes = _ref3[0];
-no = _ref3[1];
-
-
-console.log('Yes is', yes);
-console.log('No is', no);
+console.log(firstName, lastName, twitter);
