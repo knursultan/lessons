@@ -1,0 +1,37 @@
+/*
+Error: Inconsistent indentation: " \t\t\t\t\t" was used for indentation, but the rest of the document was indented using 1 tab.
+        on line 216 of /Users/nursultan/projects/lessons/wp-lesson/__clean_html/css/sass/main.sass
+
+211: 				top: -40px
+212: 				left: 0
+213: 				height: 100%
+214: 				+transition(all 0.5s ease);
+215: 				&:hover
+216:  					background-color: rgba(255, 255, 255, .08)
+217: 
+218: .top_wrapper
+219: 	display: table
+220: 	width: 100%
+221: 	height: 100%
+
+Backtrace:
+/Users/nursultan/projects/lessons/wp-lesson/__clean_html/css/sass/main.sass:216
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:486:in `block in tabulate'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:444:in `each'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:444:in `each_with_index'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:444:in `tabulate'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:409:in `_to_tree'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:391:in `run'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
+/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:18:in `load'
+/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Inconsistent indentation: \" \t\t\t\t\t\" was used for indentation, but the rest of the document was indented using 1 tab.\A         on line 216 of /Users/nursultan/projects/lessons/wp-lesson/__clean_html/css/sass/main.sass\A \A 211: 				top: -40px\A 212: 				left: 0\A 213: 				height: 100%\A 214: 				+transition(all 0.5s ease);\A 215: 				&:hover\A 216:  					background-color: rgba(255, 255, 255, .08)\A 217: \A 218: .top_wrapper\A 219: 	display: table\A 220: 	width: 100%\A 221: 	height: 100%"; }
